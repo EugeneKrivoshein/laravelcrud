@@ -66,10 +66,16 @@
 <body class="bg-light">
 
 <div class="container">
-    <h1>@yield('title')</h1>
-    <main>
-        @yield('content')
-    </main>
+  <h1>@yield('title')</h1>
+  <main>
+      @if(session('success'))
+          <div class="alert alert-success">{{ session('success') }}</div>
+      @endisset
+      @if(session('danger'))
+          <div class="alert alert-danger">{{ session('danger') }}</div>
+      @endisset
+      @yield('content')
+  </main>
 </div>
 
 <script src="https://getbootstrap.com/docs/5.3/examples/checkout/checkout.js"></script>
