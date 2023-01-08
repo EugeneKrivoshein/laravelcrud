@@ -8,7 +8,7 @@
 
 cd /var/www/
 
-git clone ... folder
+git clone https://github.com/EugeneKrivoshein/laravelcrud.git folder
 
 cd folder
 
